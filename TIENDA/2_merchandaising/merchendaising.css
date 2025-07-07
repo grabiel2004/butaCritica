@@ -1,0 +1,170 @@
+#principal{
+    margin: auto;
+    background-color: #d9414e;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box; /* hace que la caja contenedora no crezca*/
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: white;
+    padding: 20px ;
+    /* flex padre */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img{
+   width: 220px;
+   vertical-align: middle;
+   background-color: white;
+} 
+
+#menu1{
+    width: 60%;
+    /* flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#menu1 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #d9414e;
+    padding: 10px;
+    text-align: center;
+    /* flex hijo */
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#menu1 a:hover, #menu2 a:hover, #menu3 a:hover{
+    background-color: #260101;
+    color: #d9d9d9;
+}
+
+#contenido{
+    /*FLEX PADRE, SE USA PARA EL PADRE SI QUIERES HACERLO ENFILA*/ 
+    
+    align-items: right;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+
+#tienda ul{
+    text-align: center;
+    margin-top: 30px;  
+    margin-bottom: 50px;
+}
+#tienda ul li{
+    margin-top: 40px;
+    display: inline-block; /*block para que respete el ancho, margin, padding*/
+    text-align: center;
+    
+}
+
+#tienda{
+    justify-content: center;
+}
+#tienda ul li a{
+    
+    padding: 1.0em;
+    margin: 80px;
+    font-weight: lighter;
+    border-radius: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;   
+       
+}
+
+#tienda ul li:hover{
+    transform: scale(1.2);
+    
+}
+#tienda ul li a:hover{
+    transform: scale(1.2);
+    background-color:#260101;
+}
+
+#productos{
+    width: 80%;
+    margin: auto; /*para que se centre*/
+    margin-top: 80px;
+    border: 5px double black;
+    display: flex; /* ES DECIR POR DEAFAULT ES  flex-direction: row; Y FLEX-WRAP:NOWRAP ESTO HACE QUE QUE TODOS SE ACOMODEN EN LA FILA ASI TENGA UN ANCHO ESTABLECIDO*/   
+    flex-wrap: wrap; /* RESPECTA EL ANCHO QUE UNO A CONFIGURADO*/
+    justify-content: center;
+    
+    /* por default es flex - startes este permite que se alineen de manera horizontal*/
+} /* el space araound hace que tengas un distancia igual y se centren*/
+ /* align-items: center; alineacion vertical pero se debe colocar el heogth siempre y cuando este flex direction row sino este se convertira al reves*/
+.producto{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    line-height: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px; 
+    justify-items: center;
+    border-radius: 25px;
+
+}
+.producto img{
+    width: 20 0px;
+    height: 150px;
+}
+h4 a{
+    text-decoration: none;
+    color: #8C2B2B;}  
+h4{
+    color: #8C2B2B;}  
+
+#ayuda img{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 90px;
+}
+#pie{
+    margin: 5px;
+    padding: 10px;
+}
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        padding: 0 ;
+
+    }
+    #menu1{
+        width: 100%;
+    }
+}
+
+#pie{
+    background-color: #0d0d0d;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+    margin: -10px;
+}

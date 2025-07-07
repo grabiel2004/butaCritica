@@ -1,0 +1,164 @@
+/* Reset y estructura base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+body {
+  background-color: #260101;
+  color: #d9d9d9;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#logo {
+  margin-top: 60px;
+  width: 400px;
+}
+
+/* Contenedor principal del registro */
+.registro-container {
+  background-color: #0d0d0d;
+  padding: 30px 40px;
+  margin-top: 50px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Título */
+.registro-container h2 {
+  text-align: center;
+  color: #d9414e;
+  margin-bottom: 10px;
+}
+
+/* Etiquetas y campos */
+.registro-container label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.registro-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Botón principal */
+.registro-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #d9414e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registro-container button[type="submit"]:hover {
+  background-color: #a52a2a;
+}
+
+/* Texto inferior */
+.registro-container p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.registro-container p a {
+  color: #d9414e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.registro-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Registro social */
+.registro-container h3 {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-login button {
+  flex: 1;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-login button:hover {
+  transform: scale(1.05);
+}
+
+.social-login img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu1 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .registro-container {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .social-login {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-login button {
+    width: 100%;
+  }
+}
+
+#pie{
+    background-color: #0d0d0d;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+}

@@ -1,0 +1,239 @@
+#principal{
+    margin: auto;
+    background-color: #d9414e;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box; /* hace que la caja contenedora no crezca*/
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: white;
+    padding: 20px ;
+    /* flex padre */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img{
+   width: 220px;
+   vertical-align: middle;
+   background-color: white;
+} 
+
+#menu1{
+    width: 60%;
+    /* flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#menu1 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #d9414e;
+    padding: 10px;
+    text-align: center;
+    /* flex hijo */
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#menu1 a:hover, #menu2 a:hover, #menu3 a:hover{
+    background-color: #260101;
+    color: #d9d9d9;
+}
+
+
+#contenido{
+    /*FLEX PADRE, SE USA PARA EL PADRE SI QUIERES HACERLO ENFILA*/ 
+    
+   justify-content: space-between;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+#tienda ul{
+    text-align: center;
+    margin-top: 30px;  
+    margin-bottom: 50px;
+}
+#tienda ul li{
+    margin-top: 40px;
+    display: inline-block; /*block para que respete el ancho, margin, padding*/
+    text-align: center;
+    
+}
+#tienda ul li a{
+    
+    padding: 1.2em;
+    margin: 40px;
+    font-weight: lighter;
+    border-radius: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;   
+       
+}
+#tienda ul li:hover{
+    transform: scale(1.2);
+    
+}
+#tienda ul li a:hover{
+    transform: scale(1.2);
+    background-color:#260101;
+}
+#tendencias  img{
+    width: 250px;
+    height: 280px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50px;
+    justify-items: center;
+      
+}
+#tendencias{
+    margin: 20px 50px;
+    justify-items: center; 
+        
+}
+.boton{
+    text-align: center;
+   
+}
+
+#contenido h2{
+    font-size: 50px;
+
+}
+#popular p{
+    font-size: 20px;
+}
+
+#ofertas p{
+    font-size: 18px;
+}
+#popular{
+    display: flex;
+    margin: 20px;
+}
+
+
+.hijo{
+    padding: 50px;
+    width: 400px;
+    height: 300px;
+}
+.hijo2{
+    width: 100px;
+    height: 200px;
+    animation-name: movimiento ;
+    animation-duration: 20s;
+    position: relative;
+    animation-iteration-count: infinite; /* se le puede poner una cantidad fija*/
+    animation-delay: 5s; /* el tiempo que esperara para que se ejecute la animacion*/
+    
+}
+
+@keyframes movimiento{ /* trabaja con momentos y tiempos*/
+    0%{ left: 0; top: 0;} /*momento 0, quiero que haga tal accion, debe tener nombre cada uno*/
+    25%{background-color: yellow;left: 400px; top: 0;}
+    50%{background-color: orange; left: 400px; top: 120px;}
+    75%{background-color: black;left: 0; top: 120px;}
+    100%{background-color: white;left: 0; top: 0;}
+}
+.hijo2 img{
+    width: 200px;
+    height: 210px;
+    padding: 5px;
+}
+#popular img{
+    width: 250px;
+    margin: auto;
+}
+#ofertas{
+     display: flex;
+    margin: 30px;
+}
+#ofertas img{
+    width: 250px;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+
+}
+#ayuda img{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 90px;
+}
+#pie{
+    margin: 5px;
+    padding: 10px;
+}
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        padding: 0 ;
+
+    }
+    #menu1{
+        width: 100%;
+    }
+    #tendencias{
+        flex-direction: column;
+        padding: 3.0em;
+        
+    }
+    #popular{
+        flex-direction: column;
+               
+    }
+    #ofertas{
+        flex-direction: column;
+        font-size: small;
+    }
+    .hijo2{
+    width: 100px;
+    height: 200px;
+    animation-name: movimiento ;
+    animation-duration: 20s;
+    position: relative;
+    animation-iteration-count: infinite; /* se le puede poner una cantidad fija*/
+    animation-delay: 5s; /* el tiempo que esperara para que se ejecute la animacion*/
+    
+}
+
+    @keyframes movimiento{ /* trabaja con momentos y tiempos*/
+        0%{ left: 15px; top: 15px;} /*momento 0, quiero que haga tal accion, debe tener nombre cada uno*/
+        25%{background-color: yellow;left: 180px; top: 15px;}
+        50%{background-color: orange; left: 180px; top: 80px;}
+        75%{background-color: black;left: 15px; top: 80px;}
+        100%{background-color: white;left: 15px; top: 15px;}
+}
+}
+
+#pie{
+    background-color: #0d0d0d;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+    margin: -10px;
+}
